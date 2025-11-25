@@ -1,0 +1,316 @@
+/* ===============================
+   Global Reset & Theme Variables
+=================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main: #004080;
+  --main-hover: #007acc;
+  --light: #e0f0ff;
+  --lighter: #e6f0ff;
+  --text-dark: #003366;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5faff;
+  color: var(--main);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===============================
+   Profile Image
+=================================*/
+.profile-image {
+  text-align: center;
+  margin: 30px 0 10px;
+}
+
+.profile-photo {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--main);
+  transition: 0.3s;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+}
+
+/* ===============================
+   Header
+=================================*/
+header {
+  background-color: var(--light);
+  padding: 15px 0;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 5px rgba(0, 64, 128, 0.15);
+}
+
+header .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  color: var(--main);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: var(--main);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+nav a:hover {
+  color: var(--main-hover);
+}
+
+/* ===============================
+   Sections
+=================================*/
+.section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.bg-light {
+  background-color: var(--lighter);
+}
+
+/* About */
+#about p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  line-height: 1.8;
+}
+
+/* ===============================
+   Skills Section
+=================================*/
+.grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 35px;
+  margin-top: 25px;
+}
+
+.project {
+  text-align: center;
+  transition: 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-8px);
+}
+
+.proj-img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  padding: 10px;
+  background: white;
+  border-radius: 12px;
+  border: 2px solid var(--main);
+  box-shadow: 0 3px 6px rgba(0, 64, 128, 0.2);
+}
+
+.proj-title {
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* ===============================
+   Projects
+=================================*/
+.project-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.project-item {
+  max-width: 320px;
+}
+
+.project-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid var(--main);
+  box-shadow: 0 3px 6px rgba(0, 64, 128, 0.2);
+}
+
+/* ===============================
+   Contact Form
+=================================*/
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid var(--main);
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--main-hover);
+}
+
+button {
+  background-color: var(--main);
+  color: #fff;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: var(--main-hover);
+}
+
+/* ===============================
+   Footer
+=================================*/
+footer {
+  background-color: var(--light);
+  padding: 15px 0;
+  margin-top: 40px;
+  text-align: center;
+  color: var(--main);
+  font-weight: 600;
+}
+
+/* ===============================
+   Responsive (Mobile)
+=================================*/
+@media (max-width: 600px) {
+  nav ul {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+  }
+}
+/* ===============================
+   Navbar With Logo
+=================================*/
+.navbar {
+  width: 100%;
+  background-color: var(--light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 25px;
+  box-shadow: 0 2px 5px rgba(0, 64, 128, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-img {
+  height: 55px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Menu */
+#nav-menu {
+  display: flex;
+  gap: 30px;
+}
+
+#nav-menu a {
+  text-decoration: none;
+  color: var(--main);
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+#nav-menu a:hover {
+  color: var(--main-hover);
+}
+
+/* Hamburger button (mobile) */
+#menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: var(--main);
+}
+
+/* ===============================
+   Mobile Navigation
+=================================*/
+@media (max-width: 768px) {
+
+  #menu-toggle {
+    display: block;
+  }
+
+  #nav-menu {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: var(--light);
+    width: 180px;
+    display: none;
+    flex-direction: column;
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0, 64, 128, 0.2);
+  }
+
+  #nav-menu a {
+    padding: 12px 20px;
+    text-align: right;
+    border-bottom: 1px solid rgba(0, 64, 128, 0.1);
+  }
+
+  #nav-menu.show {
+    display: flex;
+  }
+}
